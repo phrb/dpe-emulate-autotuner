@@ -1,0 +1,104 @@
+{
+    "static": {
+        "cycles_max": 10000,
+        "debug": 1,
+        "xbar_record": 1,
+        "num_bits": 16,
+        "int_bits": 4,
+        "instrn_width": 48,
+        "edram_buswidth": 256,
+        "receive_buffer_depth": 16,
+        "cmesh_c": 4,
+        "num_bits_tileId": 32,
+        "flit_width": 32,
+        "num_node": 1
+    },
+    "ima": {
+        "enum_parameters": {
+            "xbar_bits": {
+                "values": ["2", "4", "6"],
+                "initial_value": 0
+            },
+            "xbar_size": {
+                "values": ["32", "64", "128", "256"],
+                "initial_value": 2
+            },
+            "dataMem_size": {
+                "values": ["256", "512", "1024", "2048"],
+                "initial_value": 1
+            },
+            "instrnMem_size": {
+                "values": ["512", "1024", "2048"],
+                "initial_value": 0
+            }
+        },
+        "integer_parameters": {
+            "num_xbar": {
+                "min": 2,
+                "max": 128,
+                "initial_value": 16
+            },
+            "dac_res": {
+                "min": 1,
+                "max": "num_bits",
+                "initial_value": 1
+            },
+            "adc_res": {
+                "min": 1,
+                "max": "num_bits",
+                "initial_value": 8
+            },
+            "num_adc": {
+                "min": 1,
+                "max": 128,
+                "initial_value": 16
+            },
+            "num_ALU": {
+                "min": 1,
+                "max": 128,
+                "initial_value": 1
+            }
+        }
+    },
+    "tile": {
+        "integer_parameters": {
+            "num_ima": {
+                "min": 1,
+                "max": 128,
+                "initial_value": 6
+            }
+        },
+        "enum_parameters": {
+            "edram_size": {
+                "values": ["64", "128", "256", "512"],
+                "initial_value": 0
+            },
+            "tile_instrnMem_size": {
+                "values": ["256", "512", "1024"],
+                "initial_value": 1
+            }
+        }
+    },
+    "node":{
+        "integer_parameters": {
+            "num_tile_compute": {
+                "min": 0,
+                "max": 128,
+                "initial_value": 2
+            }
+        },
+        "float_parameters": {
+            "noc_inj_rate": {
+                "min": 0.0,
+                "max": 0.2,
+                "initial_value": 0.005
+            }
+        },
+        "enum_parameters": {
+            "noc_num_port": {
+                "values": ["4", "8"],
+                "initial_value": 0
+            }
+        }
+    }
+}

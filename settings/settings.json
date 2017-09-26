@@ -1,0 +1,10 @@
+{
+    "final_configuration": "final_configuration.py",
+    "report_after": 20,
+    "duration": 600,
+    "cost_evaluations": 5,
+    "source_dir": "dpe_simulate",
+    "output_dir": "test/traces",
+    "application": "char_rnn",
+    "metrics_file": "hardware_stats.txt"
+}
