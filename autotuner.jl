@@ -38,7 +38,7 @@ import StochasticSearch, JSON
 
         dependency_parameters = """
 
-        # Dependable Static Parameters
+        # Static Parameters with Dependencies
         frac_bits            = num_bits - int_bits
         data_width           = num_bits
         xbdata_width         = data_width
